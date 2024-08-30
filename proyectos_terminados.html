@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos Terminados - Mi Sitio Web</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="ventanaEmergente.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo de la empresa">
+        </div>
+        <div class="counter">
+            <p>Contador de Ingresos: <span id="contador">0</span></p>
+        </div>
+        <div class="redes-sociales">
+            <a href="https://www.facebook.com"><img src="facebook.png" alt="Facebook"></a>
+            <a href="https://www.twitter.com"><img src="twitter.png" alt="Twitter"></a>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="proyectos_activos.html">Proyectos Activos</a></li>
+            <li><a href="proyectos_terminados.html">Proyectos Finalizados</a></li>
+            <li><a href="informacion.html">Información</a></li>
+        </ul>
+    </nav>
+
+    <div class="contenido">
+        <h2>Proyectos Terminados</h2>
+        <div class="proyecto">
+            <img src="proyecto0.png" alt="Huga Bugga">
+            <button onclick="mostrarVentanaEmergente()">Ver Detalles</button>
+            <div id="ventanaEmergente" class="ventana-emergente">
+                <span onclick="cerrarVentanaEmergente()" class="cerrar">&times;</span>
+                <h2>Introducción al Proyecto 1</h2>
+                <p>Una breve introducción al proyecto.</p>
+                <img src="imagen1.png" alt="Imagen 1">
+                <img src="imagen2.png" alt="Imagen 2">
+                <video controls>
+                    <source src="video.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+            </div>
+        </div>
+
+
+    <!-- <footer>
+        <p>&copy; 2024 Mi Empresa</p>
+    </footer> -->
+    
+</body>
+</html>

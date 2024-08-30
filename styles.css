@@ -1,0 +1,150 @@
+/* Estilos generales */
+
+/* Establece la fuente principal para todo el cuerpo del documento como Arial o una fuente sans-serif similar */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; /* Elimina los márgenes predeterminados */
+    padding: 0; /* Elimina el relleno predeterminado */
+    background-color: #34166a; /* Establece el color de fondo del cuerpo */
+    color: white; /* Establece el color del texto */
+    text-align: center; /* Centra el texto dentro del cuerpo */
+}
+
+/* Estilos para los elementos header, nav, .contenido, y footer */
+
+/* Aplica un relleno interno de 20px a header, nav, .contenido y footer */
+header, nav, .contenido, footer {
+    padding: 20px;
+    /*-background-color: #7b35fd; */ /* Comentario: Se ha comentado el color de fondo, lo cual significa que no se aplicará */
+    margin-bottom: 20px; /* Establece el margen inferior en 20px */
+    text-align: left; /* Alinea el texto a la izquierda dentro de estos elementos */
+}
+
+/* Estilos para la clase .logo */
+
+/* Establece el tamaño de la imagen dentro de .logo a 100px de ancho y 100px de alto */
+.logo img {
+    width: 100px;
+    height: 100px;
+}
+
+/* Estilos para la clase .counter */
+
+/* Elimina el margen de párrafo dentro de la clase .counter */
+.counter p {
+    margin: 0;
+}
+
+/* Estilos para la clase .redes-sociales */
+
+/* Establece el tamaño de las imágenes dentro de .redes-sociales a 30px de ancho y 30px de alto */
+.redes-sociales img {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px; /* Establece un margen a la izquierda de 10px */
+}
+
+/* Estilos para las listas dentro de elementos nav */
+
+/* Elimina la viñeta de la lista y los márgenes internos y externos de las listas dentro de nav */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+/* Estilos para los elementos li dentro de nav */
+
+/* Hace que los elementos li dentro de nav se muestren en línea y establece un margen derecho de 20px entre ellos */
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+    
+}
+
+/* Estilos para los enlaces dentro de los elementos li de nav */
+
+/* Elimina la decoración de subrayado de los enlaces y establece el color del texto en blanco */
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    
+}
+
+/* Estilos para la clase .contenido */
+
+/* Centra el contenido horizontalmente con un margen de 20px arriba y abajo, y establece un ancho máximo de 800px */
+.contenido {
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+/* Estilos para la clase .proyecto */
+
+/* Establece un margen inferior de 20px para la clase .proyecto */
+.proyecto {
+    margin-bottom: 20px;
+}
+
+/* Estilos para las imágenes dentro de .proyecto */
+
+/* Establece el tamaño de las imágenes dentro de .proyecto a 200px de ancho y 150px de alto */
+.proyecto img {
+    width: 200px;
+    height: 150px;
+}
+
+/* Estilos para los botones dentro de .proyecto */
+
+/* Establece el fondo del botón en un tono de gris oscuro, el color del texto en #7b35fd, elimina el borde, establece el relleno del botón y cambia el cursor a un puntero */
+.proyecto button {
+    background-color: #333;
+    color: #7b35fd;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Estilos para el footer */
+
+/* Centra el texto dentro del footer */
+footer {
+    text-align: center;
+}
+
+.ventana-emergente {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+    padding-top: 60px;
+}
+
+.ventana-emergente-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.cerrar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.cerrar:hover,
+.cerrar:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
