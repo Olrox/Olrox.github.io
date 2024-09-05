@@ -1,13 +1,27 @@
 /* Estilos generales */
 
 /* Establece la fuente principal para todo el cuerpo del documento como Arial o una fuente sans-serif similar */
+header {
+    align-self: flex-start; /* Alínea el header a la izquierda */
+    padding: 20px;
+    background-color: #5926b8;
+    width: 100%; /* Ocupar todo el ancho disponible */
+    box-sizing: border-box; /* Incluir el padding en el ancho total */
+}
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0; /* Elimina los márgenes predeterminados */
     padding: 0; /* Elimina el relleno predeterminado */
     background-color: #34166a; /* Establece el color de fondo del cuerpo */
     color: white; /* Establece el color del texto */
-    text-align: center; /* Centra el texto dentro del cuerpo */
+    /*text-align: center;  Centra el texto dentro del cuerpo */
+    display: flex;
+    /*justify-content: center;*/
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
 }
 
 /* Estilos para los elementos header, nav, .contenido, y footer */
@@ -15,7 +29,7 @@ body {
 /* Aplica un relleno interno de 20px a header, nav, .contenido y footer */
 header, nav, .contenido, footer {
     padding: 20px;
-    /*-background-color: #7b35fd; */ /* Comentario: Se ha comentado el color de fondo, lo cual significa que no se aplicará */
+    background-color: #5926b8;  /* Comentario: Se ha comentado el color de fondo, lo cual significa que no se aplicará */
     margin-bottom: 20px; /* Establece el margen inferior en 20px */
     text-align: left; /* Alinea el texto a la izquierda dentro de estos elementos */
 }
@@ -46,39 +60,65 @@ header, nav, .contenido, footer {
 
 /* Estilos para las listas dentro de elementos nav */
 
-/* Elimina la viñeta de la lista y los márgenes internos y externos de las listas dentro de nav */
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
+/* Estilos para la barra de navegación */
+nav {
+    margin: 0 auto; /* Centra la barra de navegación horizontalmente */
+    width: fit-content; /* Ajusta el ancho al contenido */
+    
+    background: #222; /* Establece el color de fondo de la barra de navegación */
+    border-radius: 10px; /* Aplica un borde redondeado de 10px a la barra de navegación */
+    display: flex; /* Utiliza Flexbox para alinear los elementos dentro de la barra de navegación */
+    justify-content: center; /* Centra los elementos hijos (enlaces) horizontalmente dentro de la barra */
+    align-items: center; /* Centra los elementos hijos (enlaces) verticalmente dentro de la barra */
+    padding: 10px 20px; /* Aplica un relleno de 10px arriba y abajo, y 20px a los lados */
 }
 
-/* Estilos para los elementos li dentro de nav */
-
-/* Hace que los elementos li dentro de nav se muestren en línea y establece un margen derecho de 20px entre ellos */
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-    
+/* Estilos para los enlaces dentro de la barra de navegación */
+nav a {
+    position: relative; /* Establece la posición relativa para permitir posicionar elementos hijos en relación con el enlace */
+    display: inline-block; /* Hace que los enlaces se comporten como bloques en línea, permitiendo ajustar ancho y alto */
+    font-size: 1em; /* Establece el tamaño de la fuente (probablemente querías poner "1em" en lugar de "lem") */
+    font-weight: 500; /* Establece el peso de la fuente en 500, lo que es un poco más grueso que el normal */
+    color: white; /* Establece el color del texto de los enlaces en blanco */
+    text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces */
+    padding: 0 23px; /* Aplica un relleno de 0px arriba y abajo, y 23px a los lados */
+    z-index: 1; /* Asegura que los enlaces se muestren por encima de otros elementos en la misma pila de contexto */
 }
 
-/* Estilos para los enlaces dentro de los elementos li de nav */
 
-/* Elimina la decoración de subrayado de los enlaces y establece el color del texto en blanco */
-nav ul li a {
-    text-decoration: none;
-    color: #ffffff;
-    
+nav span{
+    position: absolute;
+    top: 100;
+    left: 0;
+    width: 120px;
+    height: 5%;
+    background: linear-gradient(45deg, #4f1919, #ff3333);
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+nav a:nth-child(1):hover~span{
+    left: 500px;
+}
+nav a:nth-child(2):hover~span{
+    left: 600px;
+}
+nav a:nth-child(3):hover~span{
+    left: 720px;
+}
+nav a:nth-child(4):hover~span{
+    left: 850px;
 }
 
 /* Estilos para la clase .contenido */
 
 /* Centra el contenido horizontalmente con un margen de 20px arriba y abajo, y establece un ancho máximo de 800px */
 .contenido {
-    margin: 20px auto;
+    margin: auto 0 20px; /* Empuja el contenido hacia abajo */
     max-width: 800px;
+    text-align: center;
 }
+
 
 /* Estilos para la clase .proyecto */
 
@@ -99,9 +139,9 @@ nav ul li a {
 
 /* Establece el fondo del botón en un tono de gris oscuro, el color del texto en #7b35fd, elimina el borde, establece el relleno del botón y cambia el cursor a un puntero */
 .proyecto button {
-    background-color: #333;
+    background-color: #065b2e;
     color: #7b35fd;
-    border: none;
+    border-radius: 10px;
     padding: 5px 10px;
     cursor: pointer;
 }
@@ -119,8 +159,8 @@ footer {
     z-index: 1;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
     overflow: auto;
     background-color: rgba(0,0,0,0.5);
     padding-top: 60px;
@@ -135,7 +175,7 @@ footer {
 }
 
 .cerrar {
-    color: #aaa;
+    color: #f51313;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -147,4 +187,3 @@ footer {
     text-decoration: none;
     cursor: pointer;
 }
-
