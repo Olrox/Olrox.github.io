@@ -31,72 +31,61 @@
 
     <div class="contenido">
         <h2>Proyectos Activos</h2>
-        <div class="proyecto">
-            <img src="Proyectos.png" alt="Huga Remake">
-            <button onclick="mostrarVentanaEmergente()">Ver Detalles</button>
-            <div id="ventanaEmergente" class="ventana-emergente">
-                <span onclick="cerrarVentanaEmergente()" class="cerrar">&times;</span>
-                <h2>Endless runner 2D</h2>
-                <p>Huga, un cavernícola despreocupado, se encuentra relajándose al calor de la fogata,<br>
-                    cuando de pronto un volcán cercano comienza a hacer erupción, al darse cuenta del peligro<br>
-                    en el que se encontraba comienza a correr por su vida esquivando a cada animal frenético <br>
-                    que se le cruce en su camino.<br><br><br></p>
-                <img src="imagens.png" alt="Imagen 1">
-                <img src="imagens.png" alt="Imagen 2">
+      
+        <!-- Flechas de navegación -->
+        <div class="carrusel-contenedor">
+          <button class="flecha izquierda" onclick="scrollCarrusel(-1)">&#10094;</button>
+          <div class="carrusel" id="carrusel">
+            <div class="proyecto">
+              <img src="Proyectos.png" alt="Huga Remake">
+              <div class="overlay">
+                <h3>Endless Runner 2D</h3>
+                <p>Corre por tu vida tras una erupción volcánica.</p>
                 <video controls>
-                    <source src="video.mp4" type="video/mp4">
-                    Tu navegador no soporta el elemento de video.
+                  <source src="video.mp4" type="video/mp4" />
                 </video>
+              </div>
             </div>
-        </div>
-        
-        <div class="proyecto">
-            <img src="Proyectos.png" alt="FPS">
-            <button onclick="mostrarVentanaEmergente()">Ver Detalles</button>
-            <div id="ventanaEmergente" class="ventana-emergente">
-                <span onclick="cerrarVentanaEmergente()" class="cerrar">&times;</span>
-                <h2>Introducción al Proyecto 1</h2>
-                <p>Una breve introducción al proyecto.</p>
-                <img src="imagen1.png" alt="Imagen 1">
-                <img src="imagen2.png" alt="Imagen 2">
-                <video controls>
-                    <source src="video.mp4" type="video/mp4">
-                    Tu navegador no soporta el elemento de video.
-                </video>
+      
+            <div class="proyecto">
+              <img src="Proyectos.png" alt="FPS">
+              <div class="overlay">
+                <h3>FPS Experimental</h3>
+                <p>Prototipo de shooter en primera persona.</p>
+                <img src="imagen1.png" alt="Gameplay" />
+              </div>
             </div>
-        </div>
-        <div class="proyecto">
-            <img src="proyectos.png" alt="Midnight Assault">
-            <button onclick="mostrarVentanaEmergente()">Ver Detalles</button>
-            <div id="ventanaEmergente" class="ventana-emergente">
-                <span onclick="cerrarVentanaEmergente()" class="cerrar">&times;</span>
-                <h2>Introducción al Proyecto 1</h2>
-                <p>Una breve introducción al proyecto.</p>
-                <img src="imagen1.png" alt="Imagen 1">
-                <img src="imagen2.png" alt="Imagen 2">
-                <video controls>
-                    <source src="video.mp4" type="video/mp4">
-                    Tu navegador no soporta el elemento de video.
-                </video>
+      
+            <div class="proyecto">
+              <img src="Proyectos.png" alt="Midnight Assault">
+              <div class="overlay">
+                <h3>Midnight Assault</h3>
+                <p>Acción nocturna táctica.</p>
+                <img src="imagen2.png" alt="Gameplay" />
+              </div>
             </div>
-        </div>
-        <div class="proyecto">
-            <img src="Proyectos.png" alt="Teyolia ixpuxtequi">
-            <button onclick="mostrarVentanaEmergente()">Ver Detalles</button>
-            <div id="ventanaEmergente" class="ventana-emergente">
-                <span onclick="cerrarVentanaEmergente()" class="cerrar">&times;</span>
-                <h2>Introducción al Proyecto 1</h2>
-                <p>Una breve introducción al proyecto.</p>
-                <img src="imagen1.png" alt="Imagen 1">
-                <img src="imagen2.png" alt="Imagen 2">
-                <video controls>
-                    <source src="video.mp4" type="video/mp4">
-                    Tu navegador no soporta el elemento de video.
-                </video>
+      
+            <div class="proyecto">
+              <img src="Proyectos.png" alt="Teyolia ixpuxtequi">
+              <div class="overlay">
+                <h3>Teyolia Ixpuxtequi</h3>
+                <p>Juego inspirado en la mitología mexica.</p>
+                <img src="imagen1.png" alt="Arte del juego" />
+              </div>
             </div>
+          </div>
+          <button class="flecha derecha" onclick="scrollCarrusel(1)">&#10095;</button>
         </div>
-    </div>
-
+      </div>
+      
+      <script>
+        function scrollCarrusel(direccion) {
+          const carrusel = document.getElementById("carrusel");
+          const ancho = carrusel.querySelector(".proyecto").offsetWidth + 16; // incluye margen
+          carrusel.scrollBy({ left: direccion * ancho, behavior: "smooth" });
+        }
+      </script>
+      
     <!-- <footer>
         <p>&copy; 2024 Mi Empresa</p>
     </footer> -->
